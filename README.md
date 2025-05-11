@@ -1,10 +1,10 @@
 # accounting-bot
-ž
+
 This repository is used in the paper 
 
-### Developing an accounting virtual assistant through Supervised Fine-Tuning (SFT) of a Small Language Model (SLM)" which is under review for the wiley publisher.
+#### Developing an accounting virtual assistant through Supervised Fine-Tuning (SFT) of a Small Language Model (SLM)" which is under review for the wiley publisher.
 
-##### abstract
+###### abstract
 
 The development of an in-house accounting bot, an artificial intelligence (AI) assistant capable of generating internally structured bookkeeping double-entry posting schemes, is explored in this paper. The processes of curating a suitable dataset, selecting and fine-tuning a 7-billion-parameter language model, categorized as a Small Language Model (SLM)\footnote{SLMs typically refer to models with fewer than 10 billion parameters, whereas medium-sized models often have 14B parameters, and large-scale models exceed 70B.}, are described. A human-evaluated benchmark is also presented to assess model performance.
 
@@ -16,12 +16,27 @@ This proof of concept aims to support researchers and practitioners exploring th
 
 
 
-### train.py
+###### train.py
 is the code for LoRA https://unsloth.ai/ finetuning qwencoder 7B language model on bookkeeping double journal entries from 2007-2023 database. You can find the constrained and anonymized version of database on the link https://huggingface.co/datasets/mariozupan/bookkeeping-posting-schemes-2007-2023. While the model described in a paper has been trained on unmasked and unconstrained dataset, this version has been used only for proofing the concept of the paper and understanding the concept which is reproducable.
 
-### requirements.txt
+###### requirements.txt
 represents neccessary libraries installed inside nvidia apptainer which runs on https://www.srce.unizg.hr/en/advanced-computing
 
-### ollama Modelfile
-is configuration file for inference with the model in ollama llama.cpp wrapper.
+###### Ollama Modelfile
+is configuration file for inference with the model in ollama llama.cpp wrapper. Ollama has been used in terminal of the apptainer for chatting with the fine-tuned model because of its simplicity.
 
+
+Building dataset, training and inference with ollama and then evaluation against baseline LLM with few shot prompts has been described in the paper.
+
+A) Few-shot in-context learning
+
+Instead of retrieval, you can provide few-shot examples directly in the prompt:
+
+    "Here are 3 examples of accounting entries for similar transactions: … Now answer: [query]"
+
+
+
+##### Future works
+In future papers it is planned to do the following:
+a) dataset will be improved and expanded with financial indicators trends based on Croatian companies financial statements
+b) Agentic RAG embed in-house documents will be compared and evaluated. 
