@@ -42,7 +42,8 @@ a) dataset will be improved and expanded with financial indicators trends based 
 b) Agentic RAG embed in-house documents will be compared and evaluated. 
 
 
-If you use this dataset in your research, please cite the original paper:
+###### If you use this dataset in your research, please cite the original paper:
+```
 @article{zupan2025developing,
   title={Developing an Accounting Virtual Assistant Through Supervised Fine-Tuning (SFT) of a Small Language Model (SLM)},
   author={Zupan, Mario},
@@ -53,6 +54,7 @@ If you use this dataset in your research, please cite the original paper:
   year={2025},
   publisher={Wiley Online Library}
 }
+```
 
 https://onlinelibrary.wiley.com/doi/10.1002/isaf.70011
 
