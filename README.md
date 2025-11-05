@@ -40,3 +40,19 @@ Instead of retrieval, you can provide few-shot examples directly in the prompt:
 In future papers it is planned to do the following:
 a) dataset will be improved and expanded with financial indicators trends based on Croatian companies financial statements
 b) Agentic RAG embed in-house documents will be compared and evaluated. 
+
+
+If you use this dataset in your research, please cite the original paper:
+@article{zupan2025developing,
+  title={Developing an Accounting Virtual Assistant Through Supervised Fine-Tuning (SFT) of a Small Language Model (SLM)},
+  author={Zupan, Mario},
+  journal={Intelligent systems in accounting, finance and management},
+  volume={32},
+  number={3},
+  pages={e70011},
+  year={2025},
+  publisher={Wiley Online Library}
+}
+
+https://onlinelibrary.wiley.com/doi/10.1002/isaf.70011
+
